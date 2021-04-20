@@ -5,18 +5,8 @@
     width: 600px;
     height: 400px;
     transform: translate(-50%, -50%);
-    animation: game 20s linear infinite;
     background-image: url("images/view.png");
     border: 2px solid black;
-}
-
-@keyframes game {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: -2122px 0;
-    }
 }
 
 #logo {
@@ -25,22 +15,15 @@
     left: 40%;
 }
 
-p {
-    position: absolute;
-    right: 500px;
-    top: 110px;
-    -webkit-text-stroke: 0.45px black;
-    text-shadow: -1.2px 1.8px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+mark {
+    background-color: white;
 }
 
-#sound_option {
+#instructions {
     position: absolute;
-    right: 480px;
-    bottom: 160px;
-}
-
-.center {
-    text-align: center;
+    top: 200px;
+    left: 20px;
+    font-size: 20px;
 }
 
 body {
@@ -48,4 +31,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+#StartGame {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-size: 40px;
 }

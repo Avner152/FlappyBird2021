@@ -5,38 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Birds Game</title>
-    <link rel="stylesheet" href="flappy_css.css">
+    <title>Main</title>
+    <link rel="stylesheet" href="main.css">
+
 </head>
 
+<body>
+
+    <div id="instructions">
+        <h1><mark>How to Play:</mark></h1>
+        <h3><mark>Buttons: Press 'W' or 'Up' key to move up.</mark></h3>
+        <h3><mark>You can touch the top and bottom borders.</mark></h3>
+        <h3><mark>death comes when interacting with pipeline</mark></h3>
+        <h3><mark>Enjoy!</mark></h3>
+    </div>
 
 
-<style>
-    body {
-        background-image: url('images/wp.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-    }
-</style>
-
-<div id="instructions">
-    <h1><mark>How to Play:</mark></h1>
-    <h3><mark>Buttons: Press 'W' or 'Up' key to move up.</mark></h3>
-    <h3><mark>You can touch the top and bottom borders.</mark></h3>
-    <h3><mark>death comes when interacting with pipeline</mark></h3>
-    <h3><mark>Enjoy!</mark></h3>
-</div>
-
-<canvas id="game_canvas"></canvas>
-<img id="logo" src="images/logo.png">
-<img id="sound_option" src="images/unmute.png" alt="unmute" onclick="change_icon();">
-
-<p id="score" style="color: burlywood; font-size: 40px;"> <b>Score: 0</b></p>
-
-<script src="player.js"></script>
-<script src="obstacle.js"></script>
-<script src="flappy_script.js"></script>
+    <canvas id="game_canvas" onclick="location.href = 'game.html'"></canvas>
+    <img id="logo" src="images/logo.png">
+    <div id="StartGame" onclick="location.href = 'game.html'">
+        <h1><mark>Click To start</mark></h1>
+    </div>
 </body>
 
 </html>

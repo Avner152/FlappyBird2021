@@ -5,6 +5,8 @@ pipeup.src = "images/pipeup.png";
 var pipedown = new Image();
 pipedown.src = "images/pipedown.png";
 
+var coins = document.getElementById('coins');
+
 
 var obstacleheight = 300;
 
@@ -31,10 +33,8 @@ class Obstacle {
 }
 
 function obstaclesHandler() {
-    if (counter % 100 == 0) {
-        frame += 20;
-    }
-    if (frame % 40 === 0) {
+
+    if (frame % 70 === 0) {
         obstaclesArray.unshift(new Obstacle);
     }
     for (let i = 0; i < obstaclesArray.length; i++) {
@@ -46,8 +46,10 @@ function obstaclesHandler() {
 
             alert("Game Over");
             obstaclesArray[i].x -= 50;
-            location.reload();
+            location.href = "index.html";
 
+        } else if (b_player.x == obstaclesArray[i].x - 100) {
+            coins.play();
         }
     }
 

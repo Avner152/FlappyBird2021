@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flappy Birds Game</title>
+    <link rel="stylesheet" href="flappy_css.css">
+</head>
+
+
+<body>
+
+    <canvas id="game_canvas"></canvas>
+
+    <div class="center">
+        <p id="countdown" style="color:cyan; font-size: 150px;">3</p>
+    </div>
+
+    <img id="logo" src="images/logo.png">
+    <img id="sound_option" src="images/unmute.png" alt="unmute" onclick="change_icon();">
+
+    <p id="score" style="color: burlywood; font-size: 40px;"> <b>Score: 0</b></p>
+
+    <audio id="readySetGo" src="sounds/countdown.mp3"></audio>
+    <audio id="backgroundSong" src="sounds/blazerrail.wav"></audio>
+    <audio id="coins" src="sounds/coins.wav"></audio>
+
+    <script src="player.js"></script>
+    <script src="obstacle.js"></script>
+    <script src="flappy_script.js"></script>
+
+</body>
+
+</html>

@@ -2,29 +2,47 @@
 const canvas = document.getElementById('game_canvas');
 const context = canvas.getContext('2d');
 var scores = document.getElementById("score");
-
-// var muteIcon = new Image();
-// muteIcon.src = "unmute.png";
+var countDown = document.getElementById('countdown');
+var song = document.getElementById('blazerrail');
+var readySetGo = document.getElementById('readySetGo');
 
 var counter = 0;
 canvas.width = 600;
 canvas.height = 400;
 
-var song;
 let spacePressed = false;
 let frame = 0;
 let score = 0;
-let game_speed = 6;
+let game_speed = 5;
+let cooldown = parseInt(countDown.innerHTML);
+let letsGo = 0;
+
+onCreate();
+
+function onCreate() {
+    playSong();
+
+    let x = setInterval(function() {
+            if (cooldown > 1)
+                countDown.innerHTML = --cooldown + "";
+            else if (cooldown == 1) {
+                countDown.innerHTML = "Go!!!";
+                cooldown--;
+            } else {
+                countDown.innerHTML = "";
+                clearInterval(x);
+                onStart();
+            }
+        },
+        1300);
+}
 
 
-onStart();
+function playSong() {
+    readySetGo.play();
+}
 
 
-// Score "timer" //
-setInterval(function() {
-    counter++;
-    scores.innerHTML = "Score: " + counter;
-}, 50);
 
 var tracker = 1;
 
@@ -43,6 +61,13 @@ function change_icon() {
 }
 
 function onStart() {
+
+    // Score "timer" //
+    setInterval(function() {
+        counter++;
+        scores.innerHTML = "Score: " + counter;
+    }, 50);
+
     if (song == null)
         song = new Audio("sounds/blazerrail.wav");
     song.play();
@@ -58,7 +83,7 @@ function animate() {
     my_player.draw();
 
     obstaclesHandler();
-    frame++;
+    frame += parseInt(1 + (Math.random() * 3));
 
 
     requestAnimationFrame(animate);
