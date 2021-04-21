@@ -49,7 +49,13 @@ function obstaclesHandler() {
             location.href = "index.html";
 
         } else if (b_player.x == obstaclesArray[i].x - 100) {
-            coins.play();
+            if (coins.paused)
+                coins.play();
+            else {
+                coins.pause();
+                coins.currentTime = 0;
+                coins.play();
+            }
         }
     }
 
