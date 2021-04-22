@@ -12,17 +12,21 @@
 
 
 <body>
-
-    <canvas id="game_canvas"></canvas>
-
-    <div class="center">
-        <p id="countdown" style="color:cyan; font-size: 150px;">3</p>
+    <div id="container">
+        <canvas id="game_canvas"></canvas>
+        <div id="scores">
+            <p id="score" style="color: burlywood; font-size: 40px;"> <b>Score: 0</b></p>
+        </div>
+        <img id="sound_option" src="images/unmute.png" alt="unmute">
+        <div class="center">
+            <p id="countdown" style="color:cyan; font-size: 150px;">3</p>
+        </div>
     </div>
 
-    <img id="logo" src="images/logo.png">
-    <img id="sound_option" src="images/unmute.png" alt="unmute" onclick="change_icon();">
 
-    <p id="score" style="color: burlywood; font-size: 40px;"> <b>Score: 0</b></p>
+
+    <img id="logo" src="images/logo.png">
+
 
     <audio id="readySetGo" src="sounds/countdown.mp3"></audio>
     <audio id="backgroundSong" src="sounds/blazerrail.wav"></audio>

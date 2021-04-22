@@ -3,6 +3,7 @@ var b_player = new Image();
 b_player.src = "images/player.png";
 
 
+
 class Player {
     constructor() {
         this.x = 50;

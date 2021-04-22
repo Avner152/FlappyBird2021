@@ -26,20 +26,12 @@
 }
 
 p {
-    position: absolute;
-    right: 500px;
-    top: 110px;
     -webkit-text-stroke: 0.45px black;
     text-shadow: -1.2px 1.8px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-#sound_option {
-    position: absolute;
-    right: 480px;
-    bottom: 160px;
-}
-
 .center {
+    position: relative;
     text-align: center;
 }
 
@@ -48,4 +40,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.container {
+    position: relative;
+}
+
+#scores {
+    position: absolute;
+    top: 20%;
+    left: 57%;
 }
